@@ -1,0 +1,12 @@
+{
+    "name": "sink-mongodb-note-01",
+    "config": {
+        "connector.class": "com.mongodb.kafka.connect.MongoSinkConnector",
+        "topics":"ibmmq-note-01",
+        "connection.uri":"mongodb://mongodb:27017",
+        "database":"rmoff",
+        "collection":"notes",
+        "value.converter": "io.confluent.connect.avro.AvroConverter",
+        "value.converter.schema.registry.url":"http://schema-registry:8081"
+    }
+}
